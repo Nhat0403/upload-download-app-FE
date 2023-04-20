@@ -44,14 +44,19 @@ const Image = () => {
               display: 'flex',
               gap: '20px'
             }}>
-              <div 
+              <a 
                 key={index}
                 style={{ 
                   backgroundImage: `url('http://localhost:5000/${value}')`,
                   backgroundSize: 'contain',
                   backgroundRepeat: 'no-repeat',
                   width: '100px',
+                  border: '1px solid transparent',
+                  objectFit: 'cover',
+                  objectPosition: 'center center'
                 }}
+                href={'http://localhost:5000/' + value}
+                target='_blank'
                 alt={index}
               />
               <button 
